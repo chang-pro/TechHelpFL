@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+* {
+    @apply border-gray-200 dark:border-gray-700;
+}
+
+body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Apple-like system fonts */
+  :root {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  /* Minimum button size for accessibility */
+  button, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Logo sizing and visibility */
+  nav img[alt*="Logo"] {
+    max-width: none !important;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  /* Dark mode logo visibility */
+  .dark nav img[alt*="Logo"] {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+
+  /* Navbar smooth transitions */
+  nav {
+    backdrop-filter: blur(8px);
+  }
+
+  /* Prevent images from being tinted in dark mode */
+  img {
+    filter: none !important;
+  }
+  
+  .dark img {
+    filter: none !important;
+    opacity: 1 !important;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .font-body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

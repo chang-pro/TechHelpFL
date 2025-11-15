@@ -1,0 +1,14 @@
+# Quick Fix Commands for Webpack Runtime Chunk Errors
+# Run these commands in order:
+
+# 1. Clean everything
+rm -rf .next node_modules/.cache .turbo node_modules package-lock.json
+
+# 2. Reinstall with updated versions
+npm install
+
+# 3. Build to verify
+npm run build
+
+# 4. Start dev server
+npm run dev
