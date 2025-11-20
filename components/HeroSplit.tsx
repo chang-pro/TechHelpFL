@@ -20,14 +20,14 @@ export default function HeroSplit() {
             className="space-y-6"
           >
             <div className="inline-block px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 text-sm font-semibold mb-4">
-              Serving Central Florida – Daytona Beach, Ormond Beach, Port Orange, & Surrounding Areas
+              Serving Central Florida - Daytona Beach, Ormond Beach, Port Orange, and nearby
             </div>
             <div className="inline-block px-4 py-2 rounded-full bg-orange-500 dark:bg-orange-600 text-white text-sm font-bold mb-4 animate-pulse">
-              ⚡ Limited Availability: Same-Day Appointments Available Today
+              ⚡ Launch partner spots open - free Google ranking audit
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-gray-50 leading-tight">
               <Typewriter
-                text={["Get Found on Google.", "Get More Customers.", "We Fix Your Tech."]}
+                text={["Rank #1 on Google.", "Automate every lead.", "Grow without heavy ad spend."]}
                 speed={100}
                 loop={true}
                 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold"
@@ -52,9 +52,6 @@ export default function HeroSplit() {
               <ButtonColorful href={hero.cta2.href} className="text-base px-6 py-3 sm:py-4 whitespace-nowrap">
                 {hero.cta2.text}
               </ButtonColorful>
-              <ButtonColorful href={hero.cta3.href} className="text-base px-6 py-3 sm:py-4 whitespace-nowrap">
-                {hero.cta3.text}
-              </ButtonColorful>
             </div>
           </motion.div>
           <motion.div
@@ -65,7 +62,7 @@ export default function HeroSplit() {
           >
             <Image
               src="/images/hero-combined.png"
-              alt="Tech Help Florida helping people with tech support and local businesses with SEO services in Central Florida"
+              alt="Tech Help Florida boosting local business visibility on Google"
               width={1200}
               height={900}
               className="rounded-2xl w-full h-auto object-cover"
@@ -78,4 +75,3 @@ export default function HeroSplit() {
     </section>
   )
 }
-

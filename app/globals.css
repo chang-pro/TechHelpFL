@@ -8,9 +8,21 @@
 }
 
 body {
-    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50;
+    @apply text-slate-900 dark:text-slate-50;
     font-feature-settings: "rlig" 1, "calt" 1;
     transition: background-color 0.2s ease, color 0.2s ease;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.12), transparent 45%),
+      radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.15), transparent 40%),
+      linear-gradient(180deg, #fefefe 0%, #f6f6f3 45%, #fefefe 100%);
+    min-height: 100vh;
+  }
+
+  html.dark body {
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.2), transparent 45%),
+      radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.25), transparent 40%),
+      linear-gradient(180deg, #020617 0%, #0f172a 45%, #020617 100%);
   }
 
   html {
@@ -19,7 +31,7 @@ body {
 
   /* Apple-like system fonts */
   :root {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Space Grotesk", "Sora", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
   /* Minimum button size for accessibility */
@@ -28,21 +40,36 @@ body {
     min-width: 44px;
   }
 
-  /* Logo sizing and visibility */
-  nav img[alt*="Logo"] {
-    max-width: none !important;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
-
-  /* Dark mode logo visibility */
-  .dark nav img[alt*="Logo"] {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  :root {
+    /* Florida Vibes Palette */
+    --primary: 198 84% 52%; /* Vivid blue */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 150 40% 55%; /* Soft Green #5CD699 */
+    --secondary-foreground: 0 0% 100%;
+    
+    --background: 40 20% 97%; /* Sand White #F7F5F0 */
+    --foreground: 30 10% 20%; /* Warm Dark Gray */
+    
+    --muted: 30 10% 90%;
+    --muted-foreground: 30 10% 40%;
+    
+    --accent: 198 50% 90%; /* Light Ocean Mist */
+    --accent-foreground: 198 70% 40%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 20%;
+    
+    --border: 30 10% 85%;
+    --input: 30 10% 85%;
+    --ring: 198 70% 50%;
+    
+    --radius: 0.75rem;
   }
 
   /* Navbar smooth transitions */
   nav {
-    backdrop-filter: blur(8px);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
   }
 
   /* Prevent images from being tinted in dark mode */

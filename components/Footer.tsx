@@ -4,10 +4,12 @@ import { content } from "@/content"
 
 export function Footer() {
   const navLinks = [
-    { href: "/tech-support", label: "Tech Support" },
-    { href: "/business", label: "Business Services" },
-    { href: "/contact", label: "Contact" },
-    { href: "/legal", label: "Legal" },
+    { href: "#services", label: "Services" },
+    { href: "#process", label: "Process" },
+    { href: "#about", label: "About" },
+    { href: "#locations", label: "Locations" },
+    { href: "#faq", label: "FAQ" },
+    { href: "#contact", label: "Contact" },
   ]
 
   return (

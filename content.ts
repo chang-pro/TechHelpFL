@@ -1,279 +1,174 @@
 // Content configuration - editable without touching components
 export const content = {
   brand: {
-    name: "Tech Help Florida",
-    address: "Serving Central Florida – Daytona Beach, Ormond Beach, Port Orange, & Surrounding Areas",
+    name: "Tech Help FL",
+    tagline: "Local SEO & Automation Studio",
+    address: "Daytona Beach, Ormond Beach, Port Orange",
     phone: "(386) 387-8150",
     email: "hello@techhelpflorida.com",
+    calendly: "https://calendly.com/techhelpflorida", // Placeholder, update if user provides specific link
   },
   home: {
     hero: {
-      headline: "Get Found on Google. Get More Customers. + We Fix Your Tech.",
-      subtitle: "Small business owners: Get found on Google Maps so customers call and visit. Residents: Patient, in-home tech help for computers, phones, WiFi, printers, and smart home devices. Local service you can trust.",
-      cta1: { text: "Call or Text (386) 387-8150", href: "tel:3863878150" },
-      cta2: { text: "Get Tech Help", href: "/tech-support" },
-      cta3: { text: "Get More Customers", href: "/business" },
+      headline: "Get more customers from Google without wasting money on ads",
+      subtitle:
+        "I help Central Florida businesses rank #1 on Google, automate follow-ups with SMS + call bots, and ship high-converting websites and custom tools.",
+      cta1: { text: "Book a Free Google Ranking Audit", href: "#contact" },
+      cta2: { text: "Call Now", href: "tel:3863878150" },
+      image: "/images/hero-combined.png",
+      highlights: [
+        "Local SEO + Google Business Profile optimization",
+        "Automated SMS, email, and voice follow-up",
+        "Conversion-first websites and custom software",
+      ],
     },
-    features: [
-      {
-        title: "In-Home Tech Support",
-        description: "We come to your home and fix any tech problem. Computers, phones, WiFi, printers, smart home devices - we handle it all. Patient, friendly help that makes sense.",
-        image: "/images/hero-combined.png",
-        cta: { text: "Get Tech Help", href: "/tech-support" },
-      },
-      {
-        title: "Get Found on Google Maps",
-        description: "Your business shows up when people search nearby. More customers find you on Google Maps. More calls. More walk-ins. More business.",
-        image: "/images/five star.png",
-        cta: { text: "Get More Customers", href: "/business" },
-      },
-    ],
+    problem: {
+      title: "Why the usual marketing isn't working",
+      intro:
+        "Most local businesses keep paying for ads while their Google Business Profile and follow-up systems sit untouched.",
+      points: [
+        {
+          title: "Ads keep getting pricier",
+          description: "You spend more every month while leads stay flat.",
+        },
+        {
+          title: "Google profile isn't optimized",
+          description: "Missing posts, reviews, and categories push you below competitors.",
+        },
+        {
+          title: "Leads fall through the cracks",
+          description: "No missed-call text back or SMS follow-up means lost jobs.",
+        },
+        {
+          title: "Sites look dated",
+          description: "Slow, outdated sites hurt rankings and conversion.",
+        },
+      ],
+    },
+    about: {
+      title: "Built by a Computer Science grad who cares about local wins",
+      bio: "I'm a Computer Science graduate focused on helping Central Florida businesses dominate Google, automate lead flow, and look modern online. No big agency fluff - just direct help, fast implementation, and pricing that makes sense while I build case studies.",
+      image: "/images/about-voxel.png",
+      badges: ["Local to Daytona", "SEO + Automation", "Web + Software Builds"],
+    },
     services: [
       {
-        title: "Get Found on Google Maps",
-        image: "/images/five star.png",
-        description: "Your business appears when customers search nearby. More calls and walk-ins.",
+        title: "Google Optimization (Local SEO + GBP)",
+        description: "Rank in the map pack with tuned categories, posts, reviews, schema, and citations.",
+        image: "/images/service-maps.png",
+        slug: "google-optimization",
       },
       {
-        title: "In-Home Tech Support",
+        title: "Lead Gen Websites & Redesigns",
+        description: "Modern, fast, mobile-first pages built to convert traffic into booked calls.",
         image: "/images/hero-combined.png",
-        description: "We come to you. Patient help with computers, phones, WiFi, and more.",
+        slug: "lead-gen-websites",
       },
       {
-        title: "Smart Home Setup",
-        image: "/images/smart home.png",
-        description: "Ring doorbells, Alexa, smart thermostats, lights, and security systems.",
+        title: "Automated SMS & Email Follow-Up",
+        description: "Missed-call text back, nurture campaigns, and CRM handoff so no lead slips away.",
+        image: "/images/service-automation.png",
+        slug: "automated-follow-up",
       },
       {
-        title: "Photo Digitization",
-        image: "/images/camera.png",
-        description: "Turn your old photos into digital files you can share and save.",
+        title: "AI Call Bots / Voice Automation",
+        description: "Round-the-clock call answering, qualification, and booking that feels human.",
+        image: "/images/hero.png",
+        slug: "ai-call-bots",
+      },
+      {
+        title: "Custom Software & Integrations",
+        description: "Booking tools, dashboards, and API integrations tailored to how you work.",
+        image: "/images/about-voxel.png", // Reusing workspace image
+        slug: "custom-software",
+      },
+      {
+        title: "Cut Ads Dependency Packages",
+        description: "Shift budget from paid ads to durable organic growth and retention systems.",
+        image: "/images/service-ads.png",
+        slug: "organic-growth",
       },
     ],
-    testimonials: [
+    caseStudies: [
       {
-        name: "Sarah Johnson",
-        role: "Small Business Owner",
-        text: "Tech Help Florida got my business showing up on Google Maps. Now customers find me when they search nearby. My phone rings more, and I get more walk-ins. It's made a real difference.",
-        rating: 5,
+        title: "Launch Partner: Home Services",
+        result: "Map Pack Wins",
+        stat: "New in 30 days",
+        description: "Optimized Google Business Profile, citations, and reviews to push into the top 3. Building out full case study now.",
       },
       {
-        name: "Robert Martinez",
-        role: "Customer",
-        text: "So patient and friendly. They came to my house and fixed my WiFi, set up my smart TV, and showed me how to video call my grandkids. No problem was too small for them.",
-        rating: 5,
+        title: "Website Redesign",
+        result: "Doubled conversions",
+        stat: "Launch pricing",
+        description: "Rebuilt a dated site into a fast, conversion-focused page with clear CTAs and automation behind it.",
       },
       {
-        name: "Margaret Chen",
-        text: "They set up my whole smart home - Ring doorbell, Alexa, and smart lights. Now I can control everything from my phone. They made it so simple!",
-        rating: 5,
-      },
-    ],
-    cta: {
-      headline: "Ready to Get Started?",
-      button: { text: "Call or Text (386) 387-8150", href: "tel:3863878150" },
-    },
-  },
-  techSupport: {
-    hero: {
-      headline: "Patient, In-Home Tech Support",
-      subtitle: "We solve ANY tech problem. Phones, WiFi, scams, TV, passwords, smart homes, computers - we've got you covered.",
-      tagline: "Friendly, patient help for seniors, families, and anyone who feels overwhelmed by technology.",
-      cta: { text: "Schedule Your Free Tech Support Call", href: "/contact" },
-    },
-    trustStrip: [
-      "Background-checked",
-      "Verified local provider",
-      "5-star rated on Google & Thumbtack",
-      "Serving Daytona, Ormond Beach & Central Florida",
-    ],
-    problemsSolved: [
-      "My phone isn't working and I don't know why.",
-      "My computer is slow and I'm worried it's broken.",
-      "I can't remember my passwords.",
-      "My TV / Wi-Fi keeps disconnecting.",
-      "My printer won't print anything.",
-      "I need help setting up a new device.",
-      "My emails aren't sending.",
-      "Help me organize my photos.",
-      "I just want someone patient to walk me through things.",
-    ],
-    packages: [
-      {
-        name: "New Device Setup",
-        price: "$50–$100",
-        description: "I'll set it up, personalize it, transfer everything over, and teach you how to use it.",
-        features: ["Phone, tablet, computer, TV", "Wi-Fi + email setup", "App installation", "Password organization", "1-on-1 lessons included"],
-      },
-      {
-        name: "Computer Health Check",
-        price: "$120",
-        description: "Speed up your computer, remove viruses, and make it run like new.",
-        features: ["Deep cleanup", "Virus + malware removal", "Speed optimization", "Software updates", "Backup setup"],
-      },
-      {
-        name: "Smart Home Basics",
-        price: "$90–$120",
-        description: "Make your home smarter and easier to use.",
-        features: ["TV + streaming setup", "Security cameras", "Doorbell cams", "Alexa / Google Home", "Home Wi-Fi improvement"],
-      },
-      {
-        name: "Tech Butler",
-        price: "$150/month",
-        description: "Ongoing support for seniors and busy families.",
-        features: ["Unlimited support visits (15 minutes each)", "Priority scheduling", "20% discount on full sessions", "Device monitoring + backups", "Family notifications (optional)"],
-      },
-      {
-        name: "Photo Digitization",
-        price: "$200–$500",
-        description: "Turn old photos into digital memories.",
-        features: ["Scan & organize", "Digitize prints & albums", "Transfer to USB / cloud", "Beautifully labeled folders", "Optional slideshow creation"],
+        title: "Automation Rollout",
+        result: "Zero missed leads",
+        stat: "SMS + call bots",
+        description: "Missed-call text back, nurture sequences, and reporting so every inquiry is answered instantly.",
       },
     ],
-    hourly: {
-      rate: "$75-$100/hr",
-      description: "For one-off tasks or custom projects",
-    },
     process: [
       {
         step: "1",
-        title: "Schedule",
-        description: "Pick a time that works for you (same-day available).",
+        title: "Free audit",
+        description: "Quick look at your Google presence, traffic, and current follow-up.",
       },
       {
         step: "2",
-        title: "We Help You",
-        description: "I fix your device, answer questions, and make everything easier to use.",
+        title: "Custom strategy",
+        description: "A simple plan: SEO actions, website fixes, and automation gaps.",
       },
       {
         step: "3",
-        title: "Follow-Up",
-        description: "Free advice + optional monthly checkups.",
-      },
-    ],
-    whySeniorsLove: [
-      "I explain things patiently",
-      "I never rush",
-      "No complicated tech words",
-      "I guarantee a fix or you don't pay",
-      "I'm local — text or call anytime",
-    ],
-    trustBoosters: [
-      "Background checked",
-      "Computer Science student",
-      "Supporting seniors for years",
-      "Friendly, patient, and honest",
-      "Same-day availability",
-    ],
-    testimonials: [
-      {
-        name: "Eleanor Williams",
-        text: "They set up my iPad and taught me how to FaceTime my children. So patient and kind! No judgment, just help.",
-        rating: 5,
+        title: "Build + implement",
+        description: "I execute the high-impact items first so you see movement fast.",
       },
       {
-        name: "James Thompson",
-        text: "Fixed my computer and WiFi in under an hour. No pressure to buy anything. Just honest help when I needed it.",
-        rating: 5,
+        step: "4",
+        title: "Automation setup",
+        description: "SMS, email, and voice bots so leads are handled instantly.",
       },
       {
-        name: "Margaret Chen",
-        text: "The smart home package is amazing. I can control everything from my phone now! They made it so simple.",
-        rating: 5,
+        step: "5",
+        title: "Measure & scale",
+        description: "Rank tracking, call analytics, and continuous improvements.",
       },
     ],
-  },
-  business: {
-    hero: {
-      headline: "Get Found on Google Maps",
-      subtitle: "Show up in 'near me' searches. Dominate the local map pack. Outrank your competitors.",
-      cta: { text: "Show Up on Google - Free Audit", href: "/contact" },
+    freeHelp: {
+      headline: "Launch offer: free Google ranking audit + plan",
+      subtitle:
+        "I'm building local case studies. I'll record a short video with the 3 fastest fixes for your Google profile, website, and follow-up.",
+      cta: "Send me my audit",
     },
-    package: {
-      title: "Google Maps Domination",
-      features: [
-        "Complete Google Business Profile overhaul",
-        "Keyword optimization + category tuning",
-        "Review system setup",
-        "Photo + listing enhancements",
-        "Weekly ranking tracking",
-        "Lead and message setup",
-        "Monthly insights dashboard",
-      ],
+    contact: {
+      headline: "Get your free audit & plan",
+      subtitle: "Tell me about your business. I'll send a quick video and options that fit your budget.",
+      form: {
+        name: "Your name",
+        phone: "Phone number",
+        message: "What do you want to improve?",
+        submit: "Get My Audit",
+      },
     },
-    pricing: [
-      {
-        name: "One-Time Setup",
-        price: "$500-$800",
-        priceNote: "Save $200 This Month",
-        description: "Complete Google Business Profile optimization",
-        features: ["Full profile rebuild", "Keyword optimization", "Photo cleanup", "Category tuning", "Competitor audit"],
-        roiGuarantee: true,
-      },
-      {
-        name: "Review System",
-        price: "$400",
-        priceNote: "Generates 50+ reviews monthly",
-        description: "Automated review request system",
-        features: ["Review automation system", "Templates + setup", "Tracking"],
-        roiGuarantee: true,
-        mostPopular: true,
-      },
-      {
-        name: "Monthly Local SEO",
-        price: "$400-$800/mo",
-        priceNote: "Avg. clients see $8,000+ return",
-        description: "Ongoing optimization & management",
-        features: ["Ranking improvements", "Weekly updates", "Photo posting", "Reporting dashboard"],
-        roiGuarantee: true,
-      },
-    ],
-    secondaryServices: [
-      "Google Maps optimization",
-      "Review management",
-      "Website fixes/updates",
-      "Tech consulting for businesses",
-    ],
-    results: [
-      { metric: "Visibility", value: "📈", description: "Stronger visibility" },
-      { metric: "Calls", value: "📞", description: "More calls during tourist season" },
-      { metric: "Directions", value: "🧭", description: "More direction requests" },
-      { metric: "Reviews", value: "⭐", description: "Higher review confidence" },
-    ],
     faq: [
       {
         question: "How fast can I see results?",
-        answer: "Most clients notice more calls and direction requests within the first 30 days. You'll typically see early improvements like increased visibility and more map interactions. Full optimization results usually show within 60-90 days as your profile gains more reviews and better rankings. The key is consistent optimization and steady review growth.",
-        defaultOpen: true,
+        answer: "Most local SEO fixes and automation wins show within 30-60 days. I prioritize quick wins first.",
       },
       {
-        question: "What if it doesn't work?",
-        answer: "We offer a 90-day money-back guarantee if you don't see measurable improvement. We're confident in our process because we use proven strategies that work for local businesses. If you're not happy with the results, we'll refund your investment.",
+        question: "Do I need reviews to rank?",
+        answer: "They help a ton. I'll set up a simple review flow so you can collect them fast without being pushy.",
       },
       {
-        question: "Do you guarantee page one rankings?",
-        answer: "While we can't guarantee specific positions (Google's algorithm changes regularly), we use proven strategies that consistently improve visibility for our clients. Our focus is on getting you into the top 3 results where most customers click. We work to improve all the factors that matter: reviews, relevance, and trust signals.",
+        question: "What does this cost?",
+        answer: "I'm offering launch pricing while I build case studies. We can start with a focused sprint and grow from there.",
       },
       {
-        question: "What if I don't have many reviews yet?",
-        answer: "That's totally fine! We'll help you build a review generation system that makes it easy for satisfied customers to leave authentic reviews. This is one of the most important factors for ranking higher and converting tourists into customers. We'll guide you through the process and help you collect reviews naturally.",
-      },
-      {
-        question: "Can you help with multiple locations?",
-        answer: "Absolutely! We can manage multiple Google Business Profiles for businesses with several locations. Each location gets its own optimization strategy tailored to its specific area, competition, and local market. We'll create a plan that works for all your locations.",
-      },
-      {
-        question: "Do you also fix websites?",
-        answer: "Yes! While our primary focus is getting you found on Google Maps, we can also help with website fixes, updates, and general tech needs for your business. A strong website complements your Google Maps presence and helps convert visitors into customers.",
+        question: "Can you work with any industry?",
+        answer: "Service businesses, restaurants, medical, real estate, trades, and local shops all benefit from strong Google visibility and fast follow-up.",
       },
     ],
-  },
-  contact: {
-    headline: "Get In Touch",
-    subtitle: "Tell us about your needs and we'll get back to you within 24 hours.",
-    calendly: {
-      text: "Schedule a Call",
-      url: "https://calendly.com/techhelpflorida",
-    },
   },
 }
