@@ -18,7 +18,7 @@ export default function FreeHelp() {
                         <div className="flex-1 text-center md:text-left">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-xs font-bold mb-4 backdrop-blur-sm">
                                 <Video className="w-3 h-3" />
-                                Launch offer
+                                15-minute setup
                             </div>
                             <h2 className="font-heading text-3xl font-bold mb-4">
                                 {content.home.freeHelp.headline}
@@ -34,12 +34,12 @@ export default function FreeHelp() {
                                     <label htmlFor="audit-email" className="sr-only">Email Address</label>
                                     <input
                                         type="email"
-                                        id="audit-email"
-                                        placeholder="Enter your email"
-                                        className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50"
-                                    />
-                                </div>
-                                
+                                    id="audit-email"
+                                    placeholder="Where should we send the demo?"
+                                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+                                />
+                            </div>
+                            
                                 <div className="flex items-center space-x-2">
                                     <input type="checkbox" id="terms-free" className="rounded border-blue-300 text-blue-600 focus:ring-blue-500 bg-white/20" />
                                     <Label htmlFor="terms-free" className="text-xs text-blue-100">
@@ -54,7 +54,7 @@ export default function FreeHelp() {
                                     {content.home.freeHelp.cta}
                                 </button>
                                 <p className="text-xs text-blue-200 text-center">
-                                    No spam. Just a helpful video.
+                                    Fast walkthrough so you hear and see the AI receptionist.
                                 </p>
                             </form>
                         </div>

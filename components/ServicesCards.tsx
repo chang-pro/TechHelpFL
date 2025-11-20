@@ -11,10 +11,10 @@ export default function ServicesCards() {
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                        Services built to rank & convert
+                        Powerful AI Phone Automation for Local Businesses
                     </h2>
                     <p className="text-lg text-slate-600 dark:text-slate-300">
-                        Local SEO, conversion-focused sites, and automation that keeps leads moving without more ad spend.
+                        AI that answers every call, books appointments, sends confirmations, and keeps your phone lines covered 24/7.
                     </p>
                 </div>
 

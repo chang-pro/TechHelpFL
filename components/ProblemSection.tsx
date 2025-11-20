@@ -17,6 +17,11 @@ export default function ProblemSection() {
                     <p className="text-lg text-slate-600 dark:text-slate-300">
                         {content.home.problem.intro}
                     </p>
+                    {content.home.problem.placeholder && (
+                        <p className="text-sm text-slate-500 dark:text-slate-400 mt-3">
+                            {content.home.problem.placeholder}
+                        </p>
+                    )}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

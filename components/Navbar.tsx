@@ -6,7 +6,6 @@ import Image from "next/image"
 import { Menu, X, Phone } from "lucide-react"
 import { DarkModeToggle } from "./DarkModeToggle"
 import { motion } from "framer-motion"
-import { usePathname } from "next/navigation"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -14,7 +13,6 @@ export function Navbar() {
   const [isDark, setIsDark] = useState(false)
   const [activeLink, setActiveLink] = useState<string>("#services")
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
-  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,9 +52,10 @@ export function Navbar() {
 
   const navLinks = [
     { id: 1, href: "#services", label: "Services" },
+    { id: 2, href: "#pricing", label: "Pricing" },
     { id: 3, href: "#process", label: "Process" },
     { id: 4, href: "#about", label: "About" },
-    { id: 5, href: "#locations", label: "Locations" },
+    { id: 5, href: "#locations", label: "Industries" },
     { id: 6, href: "#faq", label: "FAQ" },
     { id: 7, href: "#contact", label: "Contact" },
   ]
@@ -175,7 +174,7 @@ export function Navbar() {
               href="#contact"
               className="inline-flex items-center justify-center rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-orange-500/40 transition-all hover:bg-orange-600 hover:translate-y-[-1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-orange-500"
             >
-              Book Free Audit
+              Book Setup Call
             </Link>
             <div className="flex items-center pl-2">
               <DarkModeToggle />
@@ -225,7 +224,7 @@ export function Navbar() {
                 className="block rounded-2xl bg-orange-500 text-center text-white font-semibold py-3 hover:bg-orange-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Book Free Audit
+                Book Setup Call
               </Link>
             </div>
           </div>

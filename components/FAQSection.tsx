@@ -10,10 +10,10 @@ export default function FAQSection() {
             <div className="container mx-auto px-4">
                 <div className="max-w-2xl mx-auto text-center mb-12">
                     <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                        Frequently asked
+                        Common questions about the AI receptionist
                     </h2>
                     <p className="text-lg text-slate-600 dark:text-slate-300">
-                        Straight answers while we build your plan.
+                        Straight answers while we get your phones covered.
                     </p>
                 </div>
 

@@ -9,10 +9,10 @@ export default function HowItWorks() {
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                        How It Works
+                        How the AI Receptionist Goes Live
                     </h2>
                     <p className="text-lg text-slate-600 dark:text-slate-300">
-                        Quick audit, simple plan, then fast execution with automation baked in.
+                        A short setup call, your local number, and training the AI with your script. Live in days, not months.
                     </p>
                 </div>
 

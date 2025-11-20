@@ -6,40 +6,40 @@ import Link from "next/link";
 
 const locations = [
   {
-    city: "Daytona Beach",
-    region: "Volusia County",
-    description: "Local SEO & web services for Daytona Beach businesses. Helping restaurants, hotels, and service providers rank #1 on Google Maps.",
-    keywords: ["Daytona Beach SEO", "Daytona Beach Web Design", "Local Marketing Daytona"],
+    city: "Restaurants & Cafes",
+    region: "Hospitality",
+    description: "Book tables automatically, handle takeout questions, and send reminders so hosts can focus on guests.",
+    keywords: ["Table booking", "Takeout questions", "SMS reminders"],
   },
   {
-    city: "Ormond Beach",
-    region: "Volusia County",
-    description: "Digital marketing solutions for Ormond Beach businesses. Boost your local visibility and attract more customers from Google search.",
-    keywords: ["Ormond Beach SEO", "Ormond Beach Marketing", "Web Design Ormond Beach"],
+    city: "Medical & Dental Offices",
+    region: "Healthcare",
+    description: "Schedule patients, answer common questions, and reduce front desk workload without adding staff.",
+    keywords: ["Appointment scheduling", "Patient FAQs", "Reduced hold times"],
   },
   {
-    city: "Port Orange",
-    region: "Volusia County",
-    description: "SEO and automation services for Port Orange local businesses. Get found online and convert more leads into customers.",
-    keywords: ["Port Orange SEO", "Port Orange Web Services", "Digital Marketing Port Orange"],
+    city: "HVAC, Roofing & Contractors",
+    region: "Home Services",
+    description: "Capture emergency calls instantly, collect job details, and send them to your phone via SMS.",
+    keywords: ["Emergency calls", "Job intake", "Instant SMS"],
   },
   {
-    city: "New Smyrna Beach",
-    region: "Volusia County",
-    description: "Local search optimization for New Smyrna Beach businesses. Perfect for tourism, hospitality, and local service companies.",
-    keywords: ["New Smyrna Beach SEO", "NSB Marketing", "Web Design New Smyrna"],
+    city: "Real Estate Teams",
+    region: "Property",
+    description: "Qualify leads, schedule showings, and take messages after hours so no inquiry slips away.",
+    keywords: ["Lead qualification", "Showing schedules", "After-hours coverage"],
   },
   {
-    city: "Deland",
-    region: "Volusia County",
-    description: "Professional SEO and web design for Deland businesses. Stand out in local search and grow your customer base.",
-    keywords: ["Deland SEO", "Deland Web Design", "Local Marketing Deland"],
+    city: "Marinas & Charters",
+    region: "Tourism",
+    description: "Book fishing trips, jet ski rentals, and tours even when you're on the water or out of service.",
+    keywords: ["Charter bookings", "Rental scheduling", "Off-hours calls"],
   },
   {
-    city: "Palm Coast",
-    region: "Flagler County",
-    description: "Local SEO services for Palm Coast businesses. Dominate Google Maps and local search results in Flagler County.",
-    keywords: ["Palm Coast SEO", "Palm Coast Marketing", "Web Services Palm Coast"],
+    city: "Home Services",
+    region: "Trades",
+    description: "Plumbers, electricians, painters - AI books jobs while you're on-site and away from the phone.",
+    keywords: ["Job booking", "Dispatch notes", "24/7 response"],
   },
 ];
 
@@ -53,13 +53,13 @@ export default function LocationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-          >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Serving Central Florida
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300">
-              Local SEO & web services tailored for Florida businesses. We know the market, the competition, and how to get you ranked.
-            </p>
+            >
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+                Built for Local Florida Businesses
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300">
+              Whether you're a busy restaurant or a roofing company, AI automation helps you book more jobs - without adding staff.
+              </p>
           </motion.div>
         </div>
 
@@ -124,7 +124,7 @@ export default function LocationsSection() {
             <Phone className="w-6 h-6 text-orange-600 dark:text-orange-400" />
             <div className="text-center sm:text-left">
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-1">
-                Don't see your city? We serve all of Central Florida
+                Don't see your industry? We serve all local service businesses.
               </p>
               <a
                 href="tel:3863878150"
@@ -139,4 +139,3 @@ export default function LocationsSection() {
     </section>
   );
 }
-
