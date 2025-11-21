@@ -9,12 +9,26 @@ interface Props {
 
 export function SplineScene({ scene, className }: Props) {
   return (
-    <Spline 
-      scene={scene} 
+    <div 
       className={className}
-      // @ts-ignore - Force render to ensure loop plays
-      renderOnDemand={false}
-    />
+      style={{
+        contain: "paint layout",
+        willChange: "transform",
+      }}
+    >
+      <Spline 
+        scene={scene} 
+        // @ts-ignore - Force render to ensure loop plays
+        renderOnDemand={false}
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+        }}
+      />
+    </div>
   )
 }
 
