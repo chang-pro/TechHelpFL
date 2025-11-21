@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, useInView, type Variants, type Transition } from "framer-motion";
 import { useRef, ReactNode } from "react";
 
 interface ScrollAnimationWrapperProps {
@@ -30,7 +30,13 @@ export function ScrollAnimationWrapper({
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
   const springY = useSpring(y, { stiffness: 100, damping: 30 });
 
-  const variants = {
+  const transition: Transition = {
+    duration,
+    delay,
+    ease: "easeOut",
+  };
+
+  const variants: Variants = {
     hidden: { 
       opacity: 0,
       y: animation === "fade-up" ? 50 : 0,
@@ -42,11 +48,7 @@ export function ScrollAnimationWrapper({
       y: 0,
       x: 0,
       scale: 1,
-      transition: {
-        duration: duration,
-        delay: delay,
-        ease: "easeOut",
-      },
+      transition,
     },
   };
 
@@ -70,4 +72,3 @@ export function ScrollAnimationWrapper({
     </motion.div>
   );
 }
-
