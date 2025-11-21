@@ -29,19 +29,32 @@ export default function FreeHelp() {
                         </div>
 
                         <div className="w-full md:w-auto bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-                            <form className="flex flex-col gap-4 w-full md:w-80">
+                            <form
+                                name="demo"
+                                method="POST"
+                                data-netlify="true"
+                                netlify-honeypot="bot-field"
+                                className="flex flex-col gap-4 w-full md:w-80"
+                            >
+                                <input type="hidden" name="form-name" value="demo" />
+                                <div className="hidden">
+                                    <label>
+                                        Don’t fill this out: <input name="bot-field" />
+                                    </label>
+                                </div>
                                 <div>
                                     <label htmlFor="audit-email" className="sr-only">Email Address</label>
                                     <input
                                         type="email"
+                                        name="email"
                                     id="audit-email"
                                     placeholder="Where should we send the demo?"
                                     className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50"
-                                />
-                            </div>
+                                    />
+                                </div>
                             
                                 <div className="flex items-center space-x-2">
-                                    <input type="checkbox" id="terms-free" className="rounded border-blue-300 text-blue-600 focus:ring-blue-500 bg-white/20" />
+                                    <input type="checkbox" id="terms-free" name="terms" className="rounded border-blue-300 text-blue-600 focus:ring-blue-500 bg-white/20" />
                                     <Label htmlFor="terms-free" className="text-xs text-blue-100">
                                         I agree to the <a href="/terms" className="underline hover:text-white">Terms</a> and <a href="/privacy" className="underline hover:text-white">Privacy</a>.
                                     </Label>

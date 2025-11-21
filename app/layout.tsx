@@ -4,20 +4,20 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Tech Help FL | Local SEO, Google Optimization & Lead Automation",
   description: "Central Florida Computer Science grad helping Daytona, Ormond Beach, and Port Orange businesses rank #1 on Google, automate follow-up, and scale without heavy ad spend.",
-  metadataBase: new URL("https://techhelpflorida.com"),
+  metadataBase: new URL("https://www.techhelpfl.com"),
   keywords: ["Local SEO Daytona Beach", "Google Business Profile Optimization", "Web Design Port Orange", "Lead Automation", "Google Ads Management", "Tech Help FL"],
   authors: [{ name: "Tech Help FL" }],
   creator: "Tech Help FL",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://techhelpflorida.com",
+    url: "https://www.techhelpfl.com",
     title: "Tech Help FL | Local SEO, Google Optimization & Lead Automation",
     description: "Local Computer Science grad helping Central Florida businesses win on Google with automation, web redesigns, and custom tools.",
     siteName: "Tech Help FL",
     images: [
       {
-        url: "/images/hero-voxel.png",
+        url: "https://www.techhelpfl.com/images/hero-voxel.png",
         width: 1200,
         height: 630,
         alt: "Tech Help FL Hero Image",

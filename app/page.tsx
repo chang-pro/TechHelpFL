@@ -12,6 +12,7 @@ import FAQSection from "@/components/FAQSection";
 import OtherServicesCTA from "@/components/OtherServicesCTA";
 import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
+import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
 
 export const metadata: Metadata = {
   alternates: {
@@ -24,16 +25,47 @@ export default function Home() {
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <ProblemSection />
-      <ServicesCards />
-      <PricingSection />
-      <HowItWorks />
-      <AboutMe />
-      <LocationsSection />
-      <FAQSection />
-      <FreeHelp />
-      <ContactSection />
-      <OtherServicesCTA />
+      
+      <ScrollAnimationWrapper animation="fade-up" delay={0.1}>
+        <ProblemSection />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="fade-up" delay={0.1}>
+        <ServicesCards />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="fade-up" delay={0.1}>
+        <PricingSection />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="fade-up" delay={0.1}>
+        <HowItWorks />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="fade-up" delay={0.1}>
+        <AboutMe />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="fade-up" delay={0.1}>
+        <LocationsSection />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="fade-up" delay={0.1}>
+        <FAQSection />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="scale-up" delay={0.1}>
+        <FreeHelp />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="fade-up" delay={0.1}>
+        <ContactSection />
+      </ScrollAnimationWrapper>
+
+      <ScrollAnimationWrapper animation="slide-left" delay={0.1}>
+        <OtherServicesCTA />
+      </ScrollAnimationWrapper>
+
       <Footer />
     </main>
   );

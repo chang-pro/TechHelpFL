@@ -53,16 +53,16 @@ export const content = {
           description: "Keep your local presence while adding AI speed.",
         },
         {
-          title: "Powered by Twilio + AI",
+          title: "Powered by Enterprise AI",
           description: "Reliable telephony with smart automation behind it.",
         },
       ],
     },
     about: {
       title: "Local to Daytona. Built for Local Businesses.",
-      bio: "TechHelpFL is a Florida-based automation company helping restaurants, contractors, medical offices, and service businesses turn every incoming call into a booked appointment. We combine Twilio, Vapi, and advanced AI to deliver a reliable 24/7 receptionist that never sleeps.",
+      bio: "TechHelpFL is a Florida-based automation company helping restaurants, contractors, medical offices, and service businesses turn every incoming call into a booked appointment. We combine secure enterprise telephony and advanced AI to deliver a reliable 24/7 receptionist that never sleeps.",
       image: "/images/about-voxel.png",
-      badges: ["AI phone automation", "Daytona & nearby cities", "Twilio + Vapi + AI"],
+      badges: ["AI phone automation", "Daytona & nearby cities", "Enterprise-Grade AI"],
     },
     services: [
       {

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { SplineScene } from "@/components/ui/SplineScene";
 import TextCursorProximity from "@/components/ui/TextCursorProximity";
 import Link from "next/link";
@@ -10,6 +10,14 @@ import { useRef } from "react";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
     <section ref={containerRef} className="relative w-full overflow-hidden pt-20 pb-16 md:pt-32 md:pb-24 lg:pt-44 lg:pb-32 min-h-[90vh] md:min-h-screen">
@@ -33,15 +41,20 @@ export default function HeroSection() {
           
           {/* Hero Content */}
           <motion.div
+            style={{ y, opacity }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="w-full"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/95 dark:bg-slate-900/95 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] md:tracking-[0.4em] text-slate-500 dark:text-slate-200 mb-4 md:mb-6 border border-white/40 dark:border-white/10">
+            <motion.div 
+              animate={{ y: [0, -5, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/95 dark:bg-slate-900/95 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] md:tracking-[0.4em] text-slate-500 dark:text-slate-200 mb-4 md:mb-6 border border-white/40 dark:border-white/10"
+            >
               <span className="inline-flex h-2 w-2 rounded-full bg-green-400 animate-pulse" />
               AI Receptionist
-            </div>
+            </motion.div>
             
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] md:leading-[1.05] mb-4 md:mb-6 tracking-tight">
               <TextCursorProximity

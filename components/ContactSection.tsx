@@ -68,7 +68,19 @@ export default function ContactSection() {
 
                         {/* Right: Simple Form */}
                         <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-8 rounded-3xl shadow-sm">
-                            <form className="space-y-4">
+                            <form
+                                name="contact"
+                                method="POST"
+                                data-netlify="true"
+                                netlify-honeypot="bot-field"
+                                className="space-y-4"
+                            >
+                                <input type="hidden" name="form-name" value="contact" />
+                                <div className="hidden">
+                                    <label>
+                                        Don’t fill this out: <input name="bot-field" />
+                                    </label>
+                                </div>
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1">
                                         {content.home.contact.form.name}
@@ -76,6 +88,7 @@ export default function ContactSection() {
                                     <input
                                         type="text"
                                         id="name"
+                                        name="name"
                                         className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-white/20 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-slate-800 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 transition-all outline-none"
                                         placeholder="John Doe"
                                     />
@@ -87,6 +100,7 @@ export default function ContactSection() {
                                     <input
                                         type="tel"
                                         id="phone"
+                                        name="phone"
                                         className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-white/20 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-slate-800 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 transition-all outline-none"
                                         placeholder="(386) 555-0123"
                                     />
@@ -97,6 +111,7 @@ export default function ContactSection() {
                                     </label>
                                     <textarea
                                         id="message"
+                                        name="message"
                                         rows={4}
                                     className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-white/20 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-slate-800 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 transition-all outline-none resize-none"
                                         placeholder="Tell us about your needs..."
@@ -104,7 +119,7 @@ export default function ContactSection() {
                                 </div>
                                 
                                 <div className="flex items-center space-x-2">
-                                    <input type="checkbox" id="terms" className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+                                    <input type="checkbox" id="terms" name="terms" className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
                                     <Label htmlFor="terms" className="text-xs text-slate-500 dark:text-slate-400">
                                         I agree to the <a href="/terms" className="underline hover:text-blue-500">Terms of Service</a> and <a href="/privacy" className="underline hover:text-blue-500">Privacy Policy</a>.
                                     </Label>
