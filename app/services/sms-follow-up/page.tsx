@@ -35,9 +35,7 @@ export default function SMSFollowUpPage() {
           description: "Keep the conversation going even after the phone call ends.",
         },
       ]}
-      icon={MessageSquare}
-      ctaText="Get SMS Automation"
-      ctaLink="#contact"
+      ctaText="Automate Follow-Up"
     />
   );
 }

@@ -35,9 +35,7 @@ export default function AutoBookingPage() {
           description: "Immediate confirmation and calendar invites lock in the commitment.",
         },
       ]}
-      icon={CalendarCheck}
-      ctaText="Start Booking Automatically"
-      ctaLink="#contact"
+      ctaText="Automate Bookings"
     />
   );
 }

@@ -35,9 +35,7 @@ export default function AfterHoursPage() {
           description: "Stand out as the only local business that actually answers the phone at 8 PM.",
         },
       ]}
-      icon={Moon}
       ctaText="Get 24/7 Coverage"
-      ctaLink="#contact"
     />
   );
 }

@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  staticPageGenerationTimeout: 300,
   ...(process.env.NODE_ENV === "production" && {
     output: "export",
     images: { unoptimized: true },

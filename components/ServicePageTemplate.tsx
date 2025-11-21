@@ -13,6 +13,8 @@ interface ServicePageProps {
   features: string[];
   benefits: { title: string; description: string }[];
   ctaText?: string;
+  ctaLink?: string;
+  icon?: any;
 }
 
 export default function ServicePageTemplate({
@@ -22,6 +24,8 @@ export default function ServicePageTemplate({
   features,
   benefits,
   ctaText = "Get Started",
+  ctaLink = "#contact",
+  icon: Icon,
 }: ServicePageProps) {
   return (
     <>

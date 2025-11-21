@@ -35,9 +35,7 @@ export default function SpamBlockingPage() {
           description: "Know that when the phone rings, it's actually business.",
         },
       ]}
-      icon={ShieldAlert}
-      ctaText="Block Spam Now"
-      ctaLink="#contact"
+      ctaText="Block Spam Calls"
     />
   );
 }

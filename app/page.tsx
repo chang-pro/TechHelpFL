@@ -9,7 +9,15 @@ import FreeHelp from "@/components/FreeHelp";
 import ContactSection from "@/components/ContactSection";
 import ProblemSection from "@/components/ProblemSection";
 import FAQSection from "@/components/FAQSection";
+import OtherServicesCTA from "@/components/OtherServicesCTA";
 import { Footer } from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://techhelpflorida.com",
+  },
+};
 
 export default function Home() {
   return (
@@ -25,6 +33,7 @@ export default function Home() {
       <FAQSection />
       <FreeHelp />
       <ContactSection />
+      <OtherServicesCTA />
       <Footer />
     </main>
   );

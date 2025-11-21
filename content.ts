@@ -199,13 +199,13 @@ export const content = {
       cta: "Try Live Demo",
     },
     contact: {
-      headline: "Book your AI receptionist setup call",
-      subtitle: "Tell us about your business, hours, and how you want calls booked. We'll get your AI receptionist live fast.",
+      headline: "Get in Touch",
+      subtitle: "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
       form: {
-        name: "Your name",
-        phone: "Phone number",
-        message: "Call routing notes",
-        submit: "Book Setup Call",
+        name: "Name",
+        phone: "Phone Number",
+        message: "Notes",
+        submit: "Send Message",
       },
     },
     faq: [

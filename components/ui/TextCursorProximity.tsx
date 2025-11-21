@@ -19,7 +19,7 @@ interface TextProps extends React.HTMLAttributes<HTMLSpanElement> {
   styles: Partial<{
     [K in keyof CSSPropertiesWithValues]: StyleValue<K>
   }>
-  containerRef: React.RefObject<HTMLDivElement>
+  containerRef: React.RefObject<HTMLDivElement | null>
   radius?: number
   falloff?: "linear" | "exponential" | "gaussian"
 }
@@ -40,7 +40,7 @@ const TextCursorProximity = forwardRef<HTMLSpanElement, TextProps>(
   ) => {
     const letterRefs = useRef<(HTMLSpanElement | null)[]>([])
     const mousePositionRef = useMousePositionRef(containerRef)
-    
+
     // Create a motion value for each letter's proximity
     const letterProximities = useRef(
       Array(label.replace(/\s/g, "").length)
@@ -109,7 +109,7 @@ const TextCursorProximity = forwardRef<HTMLSpanElement, TextProps>(
             {word.split("").map((letter) => {
               const currentLetterIndex = letterIndex++
               const proximity = letterProximities.current[currentLetterIndex]
-              
+
               // Create transformed values for each style property
               const transformedStyles = Object.entries(styles).reduce((acc, [key, value]) => {
                 acc[key] = useTransform(proximity, [0, 1], [value.from, value.to])

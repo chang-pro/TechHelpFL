@@ -35,9 +35,7 @@ export default function SmartTransfersPage() {
           description: "Protect your team from repetitive, low-value phone calls.",
         },
       ]}
-      icon={GitMerge}
       ctaText="Optimize Your Calls"
-      ctaLink="#contact"
     />
   );
 }

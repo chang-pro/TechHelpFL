@@ -35,9 +35,7 @@ export default function AIReceptionistPage() {
           description: "No hiring, training, or managing. Your AI agent is ready to work 24/7.",
         },
       ]}
-      icon={PhoneCall}
-      ctaText="Hear a Demo"
-      ctaLink="#contact"
+      ctaText="Start Answering Every Call"
     />
   );
 }

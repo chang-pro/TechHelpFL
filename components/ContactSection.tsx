@@ -99,7 +99,7 @@ export default function ContactSection() {
                                         id="message"
                                         rows={4}
                                     className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-white/20 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:bg-white dark:focus:bg-slate-800 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 transition-all outline-none resize-none"
-                                        placeholder="How should we handle your calls?"
+                                        placeholder="Tell us about your needs..."
                                     />
                                 </div>
                                 

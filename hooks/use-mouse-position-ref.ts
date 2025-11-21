@@ -6,7 +6,7 @@ export interface MousePosition {
 }
 
 export function useMousePositionRef(
-  containerRef: React.RefObject<HTMLElement>
+  containerRef: React.RefObject<HTMLElement | null>
 ) {
   const mousePositionRef = useRef<MousePosition>({ x: 0, y: 0 })
 
