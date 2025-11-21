@@ -2,25 +2,25 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tech Help FL | Local SEO, Google Optimization & Lead Automation",
-  description: "Central Florida Computer Science grad helping Daytona, Ormond Beach, and Port Orange businesses rank #1 on Google, automate follow-up, and scale without heavy ad spend.",
+  title: "Tech Help FL | AI Appointment Bots & Automation",
+  description: "Central Florida's premier AI automation agency. We build custom AI receptionists that answer calls 24/7, book appointments, and scale your business without new hires.",
   metadataBase: new URL("https://www.techhelpfl.com"),
-  keywords: ["Local SEO Daytona Beach", "Google Business Profile Optimization", "Web Design Port Orange", "Lead Automation", "Google Ads Management", "Tech Help FL"],
+  keywords: ["AI Receptionist", "Lead Automation", "AI Appointment Booking", "Local SEO Daytona Beach", "Business Automation", "Tech Help FL"],
   authors: [{ name: "Tech Help FL" }],
   creator: "Tech Help FL",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.techhelpfl.com",
-    title: "Tech Help FL | Local SEO, Google Optimization & Lead Automation",
-    description: "Local Computer Science grad helping Central Florida businesses win on Google with automation, web redesigns, and custom tools.",
+    title: "Tech Help FL | AI Appointment Bots & Automation",
+    description: "Stop missing calls. Our AI receptionists answer 24/7, book appointments, and capture leads instantly.",
     siteName: "Tech Help FL",
     images: [
       {
         url: "https://www.techhelpfl.com/images/hero-voxel.png",
         width: 1200,
         height: 630,
-        alt: "Tech Help FL Hero Image",
+        alt: "Tech Help FL AI Automation",
       },
     ],
   },
@@ -34,6 +34,13 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tech Help FL | AI Appointment Bots & Automation",
+    description: "Stop missing calls. Our AI receptionists answer 24/7, book appointments, and capture leads instantly.",
+    images: ["https://www.techhelpfl.com/images/hero-voxel.png"],
+    creator: "@TechHelpFL",
   },
 };
 
@@ -76,7 +83,7 @@ export default function RootLayout({
                 "New Smyrna Beach"
               ],
               "priceRange": "$$",
-              "description": "Local Computer Science graduate helping businesses with local SEO, Google optimization, automation, and conversion-focused sites.",
+              "description": "Central Florida's premier AI automation agency. We build custom AI receptionists that answer calls 24/7, book appointments, and scale your business without new hires.",
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": [

@@ -10,7 +10,7 @@ import { useRef } from "react";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -21,16 +21,16 @@ export default function HeroSection() {
 
   return (
     <section ref={containerRef} className="relative w-full overflow-hidden pt-20 pb-16 md:pt-32 md:pb-24 lg:pt-44 lg:pb-32 min-h-[90vh] md:min-h-screen">
-      {/* FULL SCREEN SPLINE BACKGROUND - HIDDEN ON MOBILE FOR PERFORMANCE */}
-      <div className="hidden md:block absolute inset-0 w-full h-full">
+      {/* FULL SCREEN SPLINE BACKGROUND */}
+      <div className="absolute inset-0 w-full h-full">
         <SplineScene
           scene="https://prod.spline.design/U6pWwpbh9bFlM0Ch/scene.splinecode"
           className="w-full h-full"
         />
       </div>
 
-      {/* MOBILE GRADIENT BACKGROUND */}
-      <div className="md:hidden absolute inset-0 bg-gradient-to-br from-slate-50 via-orange-50/30 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" />
+      {/* MOBILE GRADIENT BACKGROUND - Removed as Spline is now visible */}
+      {/* <div className="md:hidden absolute inset-0 bg-gradient-to-br from-slate-50 via-orange-50/30 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" /> */}
 
       {/* GRADIENT OVERLAY FOR TEXT READABILITY */}
       <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white/30 dark:from-transparent dark:via-slate-950/20 dark:to-slate-950/40 pointer-events-none" />
@@ -38,7 +38,7 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center justify-center min-h-[80vh] md:min-h-[calc(100vh-16rem)] text-center max-w-5xl mx-auto">
-          
+
           {/* Hero Content */}
           <motion.div
             style={{ y, opacity }}
@@ -47,7 +47,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="w-full"
           >
-            <motion.div 
+            <motion.div
               animate={{ y: [0, -5, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/95 dark:bg-slate-900/95 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] md:tracking-[0.4em] text-slate-500 dark:text-slate-200 mb-4 md:mb-6 border border-white/40 dark:border-white/10"
@@ -55,7 +55,7 @@ export default function HeroSection() {
               <span className="inline-flex h-2 w-2 rounded-full bg-green-400 animate-pulse" />
               AI Receptionist
             </motion.div>
-            
+
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] md:leading-[1.05] mb-4 md:mb-6 tracking-tight">
               <TextCursorProximity
                 label="Never Miss Another Customer Call Again."
@@ -93,7 +93,7 @@ export default function HeroSection() {
                 }}
               />
             </h1>
-            
+
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-700 dark:text-slate-200 mb-6 md:mb-10 leading-relaxed max-w-3xl mx-auto drop-shadow-sm px-4">
               Your new AI receptionist answers every call instantly, books appointments, sends confirmations, and captures leads - even after hours.
             </p>
