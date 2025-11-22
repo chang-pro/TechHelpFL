@@ -58,7 +58,7 @@ export default function HeroSection() {
 
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] md:leading-[1.05] mb-4 md:mb-6 tracking-tight">
               <TextCursorProximity
-                label="Never Miss Another Customer Call Again."
+                label="Turn Missed Calls into Paying Customers Automatically."
                 containerRef={containerRef}
                 radius={120}
                 falloff="exponential"
@@ -76,7 +76,7 @@ export default function HeroSection() {
               />
               <br className="hidden sm:block" />
               <TextCursorProximity
-                label="AI That Books Appointments 24/7 for Your Business."
+                label="Stop losing business to voicemail."
                 containerRef={containerRef}
                 radius={120}
                 falloff="exponential"

@@ -9,15 +9,16 @@ interface Props {
 
 export function SplineScene({ scene, className }: Props) {
   return (
-    <div 
+    <div
       className={className}
       style={{
         contain: "paint layout",
         willChange: "transform",
       }}
     >
-      <Spline 
-        scene={scene} 
+      <Spline
+        scene={scene}
+
         // @ts-ignore - Force render to ensure loop plays
         renderOnDemand={false}
         style={{

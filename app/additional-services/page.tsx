@@ -1,61 +1,68 @@
+"use client";
+
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ArrowRight, CheckCircle2, Search, Globe, Code, Smartphone, BarChart3, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, Search, Code, BarChart3, Zap } from "lucide-react";
 import Link from "next/link";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Additional Digital Services | Tech Help FL",
-    description: "Beyond automation: Expert Local SEO, Google Ads management, custom web development, and software solutions for Central Florida businesses.",
-    alternates: {
-        canonical: "https://techhelpflorida.com/additional-services",
-    },
-};
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function AdditionalServices() {
     const services = [
         {
-            title: "Local SEO & Map Pack Ranking",
-            description: "Be the first business customers see when they search nearby. We optimize your Google Business Profile and local citations to dominate the 'Map Pack' and drive organic foot traffic and calls.",
-            icon: <Search className="w-10 h-10 text-blue-500" />,
+            title: "Dominate Your Local Market",
+            subtitle: "Local SEO & Map Pack Ranking",
+            description: "Stop losing customers to competitors just because they show up first. We optimize your online presence to ensure you're the #1 choice when locals search for your services.",
+            benefit: "Get more customers for free without paying for ads.",
+            icon: <Search className="w-6 h-6 text-blue-500" />,
+            image: "/images/local-seo-maps.png",
             features: [
-                "Google Business Profile optimization",
-                "Local keyword dominance",
-                "Review generation strategies",
-                "Citation cleanup & building"
+                "Rank #1 in Google Maps",
+                "Drive organic foot traffic",
+                "Build 5-star reputation",
+                "Be the authority in your area"
             ]
         },
         {
-            title: "Google Ads Management",
-            description: "Stop burning budget on clicks that don't convert. We audit and restructure your campaigns to lower your Cost Per Lead (CPL) and target high-intent buyers in Daytona, Ormond, and Port Orange.",
-            icon: <BarChart3 className="w-10 h-10 text-green-500" />,
+            title: "Turn Clicks Into Revenue",
+            subtitle: "Google Ads Management",
+            description: "Stop wasting money on clicks that don't convert. We laser-target high-intent buyers in Daytona, Ormond, and Port Orange who are ready to buy right now.",
+            benefit: "Lower your cost per lead and instantly boost ROI.",
+            icon: <BarChart3 className="w-6 h-6 text-green-500" />,
+            image: "/images/google-ads-campaign.png",
             features: [
-                "Campaign ROI audit",
-                "Negative keyword filtering",
-                "High-converting ad copy",
-                "Precision location targeting"
+                "Stop wasting ad spend",
+                "Target ready-to-buy leads",
+                "Transparent ROI reporting",
+                "Beat competitors' bids"
             ]
         },
         {
-            title: "High-Performance Web Development",
-            description: "Your website should be your best salesperson. We build lightning-fast, mobile-responsive websites designed to convert visitors into paying customers, not just look pretty.",
-            icon: <Code className="w-10 h-10 text-purple-500" />,
+            title: "Your 24/7 Best Salesperson",
+            subtitle: "High-Performance Web Development",
+            description: "Your website shouldn't just look good—it should sell. We build lightning-fast sites designed psychologically to convert visitors into paying customers.",
+            benefit: "Look bigger than you are and convert more traffic.",
+            icon: <Code className="w-6 h-6 text-purple-500" />,
+            image: "/images/web-dev-performance.png",
             features: [
-                "Conversion-focused design",
-                "Mobile-first architecture",
-                "Blazing fast load speeds",
-                "SEO-friendly structure"
+                "Load in under 1 second",
+                "Mobile-first conversion design",
+                "SEO-optimized architecture",
+                "Trust-building aesthetics"
             ]
         },
         {
-            title: "Custom Software & Automation",
-            description: "Outgrow off-the-shelf tools? We build custom software solutions to streamline your specific business workflows, from client portals to automated inventory management.",
-            icon: <Zap className="w-10 h-10 text-orange-500" />,
+            title: "Automate The Busy Work",
+            subtitle: "Custom Software & Automation",
+            description: "Outgrow spreadsheets and manual data entry. We build custom software that automates your unique workflows, saving you hours every single day.",
+            benefit: "Save time, reduce errors, and scale without hiring.",
+            icon: <Zap className="w-6 h-6 text-orange-500" />,
+            image: "/images/custom-software-automation.png",
             features: [
-                "Workflow automation",
-                "Client portals & dashboards",
-                "API integrations",
-                "Legacy system upgrades"
+                "Eliminate manual data entry",
+                "Custom client portals",
+                "Connect all your apps",
+                "Scale operations effortlessly"
             ]
         }
     ];
@@ -65,66 +72,124 @@ export default function AdditionalServices() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="pt-32 pb-20 px-4">
-                <div className="container mx-auto max-w-6xl">
+            <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent dark:from-blue-950/20 dark:to-transparent pointer-events-none" />
+                <div className="container mx-auto max-w-6xl relative z-10">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h1 className="font-heading text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-                            Complete Digital Solutions for <span className="text-blue-600">Local Growth</span>
-                        </h1>
-                        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
-                            We don't just do AI. From ranking #1 on Google Maps to building custom software, we provide the technical edge your business needs to scale in Central Florida.
-                        </p>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <h1 className="font-heading text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                                Scale Your Business With <span className="text-blue-600">Technical Precision</span>
+                            </h1>
+                            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+                                Beyond AI. We provide the foundational digital infrastructure—from ranking #1 on Google to custom automation—that allows you to dominate the Central Florida market.
+                            </p>
+                        </motion.div>
                     </div>
+                </div>
+            </section>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {services.map((service, index) => (
-                            <div key={index} className="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-lg border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group">
-                                <div className="mb-6 bg-slate-100 dark:bg-slate-800 w-20 h-20 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
-                                    {service.icon}
-                                </div>
-                                <h3 className="font-heading text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                                    {service.title}
-                                </h3>
-                                <p className="text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-                                    {service.description}
-                                </p>
-                                <ul className="space-y-3">
-                                    {service.features.map((feature, fIndex) => (
-                                        <li key={fIndex} className="flex items-center gap-3 text-slate-700 dark:text-slate-200">
-                                            <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
-                                            <span>{feature}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="mt-20 text-center">
-                        <div className="bg-blue-600 dark:bg-blue-500 rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
-                            <div className="relative z-10">
-                                <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
-                                    Stop Losing Leads to Competitors
-                                </h2>
-                                <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-                                    Whether it's fixing your Google Ads or rebuilding your site, we have the technical expertise to turn your digital presence into a revenue engine.
-                                </p>
-                                <Link
-                                    href="/#contact"
-                                    className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
+            {/* Services Sections */}
+            <div className="space-y-0">
+                {services.map((service, index) => (
+                    <section key={index} className={`py-24 ${index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-slate-50 dark:bg-slate-950'}`}>
+                        <div className="container mx-auto px-4 max-w-6xl">
+                            <div className="grid lg:grid-cols-2 gap-12 md:gap-24 items-center">
+                                {/* Text Content */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    transition={{ duration: 0.7, ease: "easeOut" }}
+                                    className={`order-2 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}
                                 >
-                                    Get a Free Audit
-                                    <ArrowRight className="w-5 h-5" />
-                                </Link>
-                            </div>
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold mb-6">
+                                        {service.icon}
+                                        {service.subtitle}
+                                    </div>
+                                    <h2 className="font-heading text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                                        {service.title}
+                                    </h2>
+                                    <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                                        {service.description}
+                                    </p>
+                                    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl mb-8">
+                                        <p className="text-blue-800 dark:text-blue-200 font-medium italic">
+                                            "{service.benefit}"
+                                        </p>
+                                    </div>
+                                    <ul className="space-y-4">
+                                        {service.features.map((feature, fIndex) => (
+                                            <li key={fIndex} className="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                                                <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
+                                                    <CheckCircle2 className="w-4 h-4 text-green-600 dark:text-green-400" />
+                                                </div>
+                                                <span className="font-medium">{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </motion.div>
 
-                            {/* Background decoration */}
-                            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                                <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl" />
-                                <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-white rounded-full blur-3xl" />
+                                {/* Image Content */}
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    transition={{ duration: 0.7, delay: 0.2 }}
+                                    className={`order-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}
+                                >
+                                    <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 group">
+                                        <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                                        <Image
+                                            src={service.image}
+                                            alt={service.title}
+                                            width={800}
+                                            height={600}
+                                            className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none" />
+                                    </div>
+                                </motion.div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+                ))}
+            </div>
+
+            {/* CTA Section */}
+            <section className="py-24 px-4">
+                <div className="container mx-auto max-w-5xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-blue-600 dark:bg-blue-500 rounded-[2.5rem] p-10 md:p-20 shadow-2xl relative overflow-hidden text-center"
+                    >
+                        <div className="relative z-10">
+                            <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-8">
+                                Ready to Outperform Your Competitors?
+                            </h2>
+                            <p className="text-blue-100 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Don't settle for average results. Get the high-performance digital infrastructure your business deserves.
+                            </p>
+                            <Link
+                                href="/#contact"
+                                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                            >
+                                Get Your Free Strategy Audit
+                                <ArrowRight className="w-5 h-5" />
+                            </Link>
+                        </div>
+
+                        {/* Background decoration */}
+                        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                            <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl" />
+                            <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-white rounded-full blur-3xl" />
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 

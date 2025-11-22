@@ -11,7 +11,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isDark, setIsDark] = useState(false)
-  const [activeLink, setActiveLink] = useState<string>("#services")
+  const [activeLink, setActiveLink] = useState<string>("/#services")
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
 
   useEffect(() => {
@@ -27,14 +27,14 @@ export function Navbar() {
     const checkDarkMode = () => {
       setIsDark(document.documentElement.classList.contains("dark"))
     }
-    
+
     checkDarkMode()
     const observer = new MutationObserver(checkDarkMode)
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["class"],
     })
-    
+
     return () => observer.disconnect()
   }, [])
 
@@ -51,26 +51,29 @@ export function Navbar() {
   }, [mobileMenuOpen])
 
   const navLinks = [
-    { id: 1, href: "#services", label: "Services" },
-    { id: 2, href: "#pricing", label: "Pricing" },
-    { id: 3, href: "#process", label: "Process" },
-    { id: 4, href: "#about", label: "About" },
-    { id: 5, href: "#locations", label: "Industries" },
-    { id: 6, href: "#faq", label: "FAQ" },
-    { id: 7, href: "#contact", label: "Contact" },
+    { id: 1, href: "/#services", label: "Services" },
+    { id: 8, href: "/advanced-services", label: "Advanced Services" },
+    { id: 2, href: "/#pricing", label: "Pricing" },
+    { id: 3, href: "/#process", label: "Process" },
+    { id: 4, href: "/#about", label: "About" },
+    { id: 5, href: "/#locations", label: "Industries" },
+    { id: 6, href: "/#faq", label: "FAQ" },
+    { id: 7, href: "/#contact", label: "Contact" },
   ]
 
   // Track active section on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navLinks.filter(link => link.href.startsWith('#')).map(link => link.href.substring(1))
-      
+      const sections = navLinks
+        .filter(link => link.href.startsWith('/#'))
+        .map(link => link.href.substring(2))
+
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const rect = element.getBoundingClientRect()
           if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveLink(`#${section}`)
+            setActiveLink(`/#${section}`)
             break
           }
         }
@@ -117,10 +120,10 @@ export function Navbar() {
                 href={link.href}
                 className="relative px-4 py-2 text-sm xl:text-base font-medium transition-colors duration-300"
                 style={{
-                  color: activeLink === link.href 
-                    ? 'var(--color-orange-500)' 
-                    : isDark 
-                      ? 'rgb(226, 232, 240)' 
+                  color: activeLink === link.href
+                    ? 'var(--color-orange-500)'
+                    : isDark
+                      ? 'rgb(226, 232, 240)'
                       : 'rgb(71, 85, 105)'
                 }}
                 onClick={() => setActiveLink(link.href)}
@@ -128,7 +131,7 @@ export function Navbar() {
                 onMouseLeave={() => setHoveredLink(null)}
               >
                 <span className="relative z-10">{link.label}</span>
-                
+
                 {/* Hover Background */}
                 {hoveredLink === link.href && (
                   <motion.div
@@ -140,7 +143,7 @@ export function Navbar() {
                     transition={{ duration: 0.2 }}
                   />
                 )}
-                
+
                 {/* Active Underline */}
                 {activeLink === link.href && (
                   <motion.div
@@ -149,7 +152,7 @@ export function Navbar() {
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
-                
+
                 {/* Hover Underline */}
                 {hoveredLink === link.href && activeLink !== link.href && (
                   <motion.div
@@ -195,9 +198,8 @@ export function Navbar() {
         </div>
 
         <div
-          className={`lg:hidden fixed inset-x-4 top-24 z-40 rounded-3xl bg-white/95 dark:bg-slate-950/90 backdrop-blur-2xl border border-white/60 dark:border-white/10 transition-all duration-300 origin-top ${
-            mobileMenuOpen ? "scale-100 opacity-100 pointer-events-auto" : "scale-95 opacity-0 pointer-events-none"
-          }`}
+          className={`lg:hidden fixed inset-x-4 top-24 z-40 rounded-3xl bg-white/95 dark:bg-slate-950/90 backdrop-blur-2xl border border-white/60 dark:border-white/10 transition-all duration-300 origin-top ${mobileMenuOpen ? "scale-100 opacity-100 pointer-events-auto" : "scale-95 opacity-0 pointer-events-none"
+            }`}
         >
           <div className="py-6 space-y-1">
             {navLinks.map((link) => (
